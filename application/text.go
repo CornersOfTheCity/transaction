@@ -1,0 +1,13 @@
+package main
+
+import "github.com/gin-gonic/gin"
+
+func mains() {
+	r := gin.Default()
+	r.GET("/ping", func(context *gin.Context) {
+		context.JSON(200, gin.H{
+			"data": "success",
+		})
+	})
+	r.Run()
+}
